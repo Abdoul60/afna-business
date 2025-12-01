@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Afna Business - Sublimation Professionnelle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-banner">
+        <i class="fas fa-truck"></i> Livraison GRATUITE à Niamey dès 20 000 FCFA d'achat ! 🎉
+    </div>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-print"></i>
+                Al-Afna Business
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="menu">
+                <li><a href="#accueil" onclick="closeMenu()">Accueil</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#images" onclick="closeMenu()">Nos Réalisations</a></li>
+                <li><a href="#galerie" onclick="closeMenu()">Galerie</a></li>
+                <li><a href="#commander" onclick="closeMenu()">Commander</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Al-Afna Business</h1>
+            <p>Sublimation Professionnelle & Produit de Qualité Supérieure </p>
+            <p>Transformez vos idées en créations uniques avec notre expertise en sublimation</p>
+            <a href="#commander" class="cta-button">Commander Maintenant</a>
+        </div>
+    </section>
+
+    <div class="features-bar">
+        <div class="features-container">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                <div>
+                    <h4>Livraison Rapide</h4>
+                    <p>24-72h à Niamey et environs</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <div>
+                    <h4>Paiement Sécurisé</h4>
+                    <p>100% protégé</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-undo"></i></div>
+                <div>
+                    <h4>Retour Gratuit</h4>
+                    <p>30 jours</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                <div>
+                    <h4>Support 24/7</h4>
+                    <p>À votre écoute</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <h2>Nos Services de Sublimation</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-tshirt service-icon"></i>
+                    <h3>Textiles</h3>
+                    <p>T-shirts, casquettes personnalisés avec des impressions durables et éclatantes</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mug-hot service-icon"></i>
+                    <h3>Mugs </h3>
+                    <p>Mugs personnalisés parfaits pour des cadeaux uniques ou votre collection</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-gift service-icon"></i>
+                    <h3>Cadeaux Personnalisés</h3>
+                    <p>Coussins, plaques, puzzles pour des occasions spéciales inoubliables</p>
+                </div>
+                <!--<div class="service-card">
+                    <i class="fas fa-image service-icon"></i>
+                    <h3>Décoration</h3>
+                    <p>Toiles, cadres photo, tableaux sublimés pour embellir votre intérieur</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt service-icon"></i>
+                    <h3>Accessoires</h3>
+                    <p>Coques de téléphone, porte-clés, badges personnalisés de haute qualité</p>
+                </div>-->
+                <div class="service-card">
+                    <i class="fas fa-briefcase service-icon"></i>
+                    <h3>Professionnel</h3>
+                    <p>Solutions pour entreprises : goodies, cadeaux d'affaires, événements corporatifs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="images">
+        <div class="container">
+            <h2>Nos Réalisations</h2>
+            <div class="images-grid">
+                <div class="image-card">
+                    <span>T-Shirts Premium</span>
+                </div>
+                <div class="image-card">
+                    <span>Mugs Personnalisés</span>
+                </div>
+                <div class="image-card">
+                    <span>Coussins Design</span>
+                </div>
+                <div class="image-card">
+                    <span>Décoration Murale</span>
+                </div>
+                <div class="image-card">
+                    <span>Accessoires Uniques</span>
+                </div>
+                <div class="image-card">
+                    <span>Cadeaux Entreprise</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie">
+        <div class="container">
+            <h2>Galerie de Produits</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <i class="fas fa-tshirt"></i>
+                    <div class="gallery-overlay">
+                        <h3>Collection Textile</h3>
+                        <p>Personnalisation complète</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-mug-hot"></i>
+                    <div class="gallery-overlay">
+                        <h3>Mugs & Drinkware</h3>
+                        <p>Qualité supérieure</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-palette"></i>
+                    <div class="gallery-overlay">
+                        <h3>Art Mural</h3>
+                        <p>Designs uniques</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-gift"></i>
+                    <div class="gallery-overlay">
+                        <h3>Cadeaux Spéciaux</h3>
+                        <p>Pour toutes occasions</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="gallery-overlay">
+                        <h3>Accessoires Tech</h3>
+                        <p>Protection & style</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-star"></i>
+                    <div class="gallery-overlay">
+                        <h3>Édition Limitée</h3>
+                        <p>Produits exclusifs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="commander">
+        <div class="container">
+            <h2>Passer une Commande</h2>
+            <div class="order-form">
+                <form onsubmit="handleOrder(event)">
+                    <div class="form-group">
+                        <label for="nom">Nom Complet *</label>
+                        <input type="text" id="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Téléphone *</label>
+                        <input type="tel" id="telephone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="produit">Type de Produit *</label>
+                        <select id="produit" required>
+                            <option value="">Choisissez un produit</option>
+                            <option value="textile">Textile (T-shirt, casquettes etc.)</option>
+                            <option value="mug">Mugs </option>
+                            <option value="cadeau">Cadeaux Personnalisés</option>
+                            <option value="decoration">Décoration</option>
+                            <option value="accessoire">Accessoires</option>
+                            <option value="professionnel">Commande Professionnelle</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantite">Quantité *</label>
+                        <input type="number" id="quantite" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Détails de votre Commande *</label>
+                        <textarea id="details" required placeholder="Décrivez votre projet : design souhaité, couleurs, dimensions, etc."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-shopping-cart"></i> Envoyer ma Commande
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Téléphone</h3>
+                    <p>+227 98-12-07-28</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>contactalafna@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Localisation</h3>
+                    <p>Niamey, Niger</p>
+                </div>
+            </div>
+
+            <div class="social-buttons">
+                <a href="https://wa.me/+22793627145" class="social-btn whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="https://facebook.com/alafnabusiness" class="social-btn facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </a>
+                <a href="https://instagram.com/alafnabusiness" class="social-btn instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+                <a href="mailto:contactalafna@gmail.com" class="social-btn email">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a href="tel:+227 98120728" class="social-btn phone">
+                    <i class="fas fa-phone-alt"></i>
+                    Appeler
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <section class="section1">
+        <div class="newsletter-section">
+            <h3><i class="fas fa-envelope-open-text"></i> Restez informés !</h3>
+            <p>Inscrivez-vous et recevez -15% sur votre première commande</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Merci !')">
+                <input type="email" class="newsletter-input" placeholder="Votre email" required>
+                <button type="submit" class="newsletter-btn">
+                    <i class="fas fa-paper-plane"></i> S'inscrire
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 <span class="footer-gold">Al-Afna Business</span> - Tous droits réservés</p>
+        <p>Sublimation Professionnelle de Qualité</p>
+        <p style="margin-top: 1rem;">
+            <i class="fas fa-print" style="color: var(--gold);"></i>
+            Excellence en Sublimation
+        </p>
+    </footer>
+
+    <script src="shop.js"></script>
+</body>
+</html>

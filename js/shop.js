@@ -10,11 +10,32 @@ function toggleMenu() {
 
         function handleOrder(event) {
             event.preventDefault();
+
             const nom = document.getElementById('nom').value;
+            const email = document.getElementById('email').value;
+            const telephone = document.getElementById('telephone').value;
             const produit = document.getElementById('produit').value;
-            alert(`Merci ${nom} ! Votre commande de ${produit} a été reçue. Nous vous contacterons très bientôt pour confirmer les détails.`);
-            event.target.reset();
+            const quantite = document.getElementById('quantite').value;
+            const details = document.getElementById('details').value;
+
+            const message = `Nouvelle commande:\n\nNom: ${nom}\nEmail: ${email}\nTéléphone: ${telephone}\nProduit: ${produit}\nQuantité: ${quantite}\n\nDétails:\n${details}`;
+
+            // Rediriger vers WhatsApp
+            const whatsappUrl = `https://wa.me/22793627145?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+
+            alert('✅ Merci ! Vous allez être redirigé vers WhatsApp pour finaliser votre commande.');
+            document.querySelector('form').reset();
         }
+
+        // CSS pour le menu mobile
+        const style = document.createElement('style');
+        style.textContent = `
+            #menu.active {
+                display: flex !important;
+            }
+        `;
+        document.head.appendChild(style);
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

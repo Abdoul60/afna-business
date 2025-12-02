@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="top-banner">
-        <i class="fas fa-truck"></i> Livraison GRATUITE à Niamey dès 20 000 FCFA d'achat ! 🎉
+        <i class="fas fa-truck"></i> Livraison GRATUITE à Niamey dès 20 000 FCFA d'achat !
     </div>
     <nav>
         <div class="container">
@@ -24,8 +24,9 @@
                 <li><a href="#accueil" onclick="closeMenu()">Accueil</a></li>
                 <li><a href="#services" onclick="closeMenu()">Services</a></li>
                 <li><a href="#images" onclick="closeMenu()">Nos Réalisations</a></li>
-                <li><a href="#galerie" onclick="closeMenu()">Galerie</a></li>
-                <li><a href="#commander" onclick="closeMenu()">Commander</a></li>
+                <li><a href="boutique.html" onclick="closeMenu()"><i class="fas fa-store"></i> Boutique</a></li>
+                <li><a href="panier.html" onclick="closeMenu()"><i class="fas fa-shopping-cart"></i> Panier</a></li>
+                <li><a href="admin.html" onclick="closeMenu()"><i class="fas fa-lock"></i> Admin</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
         </div>
@@ -116,76 +117,20 @@
             <h2>Nos Réalisations</h2>
             <div class="images-grid">
                 <div class="image-card">
+                    <img src="TEE-SHIRT.jpg" alt="T-Shirts Premium">
                     <span>T-Shirts Premium</span>
                 </div>
                 <div class="image-card">
+                    <img src="cadeau-saint-valentin-mug-a-personnaliser-prenom-jolimug-1-0.jpg" alt="Mugs Personnalisés">
                     <span>Mugs Personnalisés</span>
                 </div>
                 <div class="image-card">
-                    <span>Coussins Design</span>
-                </div>
-                <div class="image-card">
-                    <span>Décoration Murale</span>
-                </div>
-                <div class="image-card">
-                    <span>Accessoires Uniques</span>
-                </div>
-                <div class="image-card">
+                    <img src="221399.jpg" alt="Cadeaux Entreprise">
                     <span>Cadeaux Entreprise</span>
                 </div>
             </div>
         </div>
     </section>
-
-   <!-- <section id="galerie">
-        <div class="container">
-            <h2>Galerie de Produits</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <i class="fas fa-tshirt"></i>
-                    <div class="gallery-overlay">
-                        <h3>Collection Textile</h3>
-                        <p>Personnalisation complète</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-mug-hot"></i>
-                    <div class="gallery-overlay">
-                        <h3>Mugs & Drinkware</h3>
-                        <p>Qualité supérieure</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-palette"></i>
-                    <div class="gallery-overlay">
-                        <h3>Art Mural</h3>
-                        <p>Designs uniques</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-gift"></i>
-                    <div class="gallery-overlay">
-                        <h3>Cadeaux Spéciaux</h3>
-                        <p>Pour toutes occasions</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <div class="gallery-overlay">
-                        <h3>Accessoires Tech</h3>
-                        <p>Protection & style</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-star"></i>
-                    <div class="gallery-overlay">
-                        <h3>Édition Limitée</h3>
-                        <p>Produits exclusifs</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
 
     <section id="commander">
         <div class="container">
@@ -255,11 +200,11 @@
             </div>
 
             <div class="social-buttons">
-                <a href="https://wa.me/+22793627145" class="social-btn whatsapp" target="_blank">
+                <a href="https://wa.me/22793627145" class="social-btn whatsapp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     WhatsApp
                 </a>
-                <a href="https://facebook.com/alafnabusiness" class="social-btn facebook" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=61574315413104" class="social-btn facebook" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                     Facebook
                 </a>
@@ -292,6 +237,20 @@
         </div>
     </section>
 
+    <section id="boutique" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>Notre Boutique</h2>
+            <div class="boutique-grid" id="boutiqueMini" style="margin-bottom: 40px;">
+                <!-- Les 4 produits seront insérés ici par JavaScript -->
+            </div>
+            <div style="text-align: center;">
+                <a href="boutique.html" class="cta-button">
+                    <i class="fas fa-store"></i> Voir Tous les Produits
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2025 <span class="footer-gold">Al-Afna Business</span> - Tous droits réservés</p>
         <p>Sublimation Professionnelle de Qualité</p>
@@ -301,6 +260,66 @@
         </p>
     </footer>
 
-    <script src="shop.js"></script>
+    <script src="js/boutique.js"></script>
+    <script src="js/shop.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Vérifier que products.js est bien chargé
+        if (typeof getFeaturedProducts === 'undefined') {
+            console.error('products.js non chargé');
+            return;
+        }
+
+        const boutiqueMini = document.getElementById('boutiqueMini');
+        const featured = getFeaturedProducts();
+
+        // Afficher les 4 produits phares
+        boutiqueMini.innerHTML = featured.map(product => `
+            <div class="product-card-home">
+                <div style="position: relative;">
+                    <img src="${product.image}" 
+                         alt="${product.name}"
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22250%22 height=%22250%22><rect fill=%22%23f0f0f0%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2214%22>Image non disponible</text></svg>'">
+                    <span class="stock-badge-home ${!product.inStock ? 'out' : ''}">
+                        ${product.inStock ? '✓ En Stock' : '✗ Rupture'}
+                    </span>
+                </div>
+                <div class="product-card-info">
+                    <div class="product-card-category">${product.category}</div>
+                    <div class="product-card-name">${product.name}</div>
+                    <div class="product-card-desc">${product.description}</div>
+                    <div class="product-card-price">${product.price.toLocaleString()} FCFA</div>
+                    <div class="product-card-actions">
+                        <button class="btn-cart btn-cart-full ${!product.inStock ? 'disabled' : ''}" 
+                                onclick="addToCartHome(${product.id})"
+                                ${!product.inStock ? 'disabled' : ''}>
+                            <i class="fas fa-shopping-cart"></i> Ajouter au Panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    });
+
+    function addToCartHome(productId) {
+        if (typeof getProductById === 'undefined') {
+            console.error('products.js non chargé');
+            return;
+        }
+
+        const product = getProductById(productId);
+        if (!product) return;
+
+        const color = product.colors[0] || 'Noir';
+        
+        if (typeof addToCart === 'function') {
+            addToCart(productId, 1, color);
+            alert(`✅ ${product.name} ajouté au panier!\n\nPrix: ${product.price.toLocaleString()} FCFA`);
+        }
+    }
+    </script>
+
 </body>
 </html>

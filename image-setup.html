@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Guide Installation Images - Al-Afna Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .guide-section {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--gold);
+        }
+        h1 {
+            color: var(--gold);
+            text-align: center;
+        }
+        h2 {
+            color: var(--dark);
+            margin-top: 20px;
+        }
+        .code-block {
+            background: #1a1a1a;
+            color: #d4af37;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+            margin: 15px 0;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .checklist li:before {
+            content: "✓ ";
+            color: var(--gold);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>📸 Guide Installation des Images</h1>
+
+    <div class="guide-section">
+        <h2>1. Structure des Dossiers</h2>
+        <p>Créez cette structure dans votre projet:</p>
+        <div class="code-block">
+afnaB/
+├── index.html
+├── boutique.html
+├── panier.html
+├── admin.html
+├── styles.css
+├── products.js
+├── boutique.js
+├── shop.js
+└── images/
+    ├── montre1.jpg
+    ├── montre2.jpg
+    ├── montre3.jpg
+    ├── montre4.jpg
+    ├── lunettes1.jpg
+    ├── lunettes2.jpg
+    ├── lunettes3.jpg
+    └── lunettes4.jpg
+        </div>
+    </div>
+
+    <div class="guide-section">
+        <h2>2. Télécharger les Images</h2>
+        <ul class="checklist">
+            <li>Montre Personnalisée → montre1.jpg</li>
+            <li>Montre Sportive → montre2.jpg</li>
+            <li>Montre Luxe → montre3.jpg</li>
+            <li>Montre Digitale → montre4.jpg</li>
+            <li>Lunettes de Soleil → lunettes1.jpg</li>
+            <li>Lunettes Optiques → lunettes2.jpg</li>
+            <li>Lunettes Vintage → lunettes3.jpg</li>
+            <li>Lunettes Polarisées → lunettes4.jpg</li>
+        </ul>
+        <div class="warning">
+            <strong>⚠️ Attention:</strong> Les noms des fichiers doivent être exactement comme ci-dessus
+        </div>
+    </div>
+
+    <div class="guide-section">
+        <h2>3. Recommandations pour les Images</h2>
+        <ul class="checklist">
+            <li>Résolution: 800x700px minimum</li>
+            <li>Format: JPG ou PNG</li>
+            <li>Taille fichier: Moins de 200KB</li>
+            <li>Fond clair ou transparent</li>
+            <li>Images de bonne qualité</li>
+            <li>Pas de texte sur l'image</li>
+        </ul>
+    </div>
+
+    <div class="guide-section">
+        <h2>4. Où Trouver les Images Gratuites</h2>
+        <ul>
+            <li><strong>Unsplash:</strong> unsplash.com (Recherchez "watch" ou "sunglasses")</li>
+            <li><strong>Pexels:</strong> pexels.com (Bonne qualité, gratuit)</li>
+            <li><strong>Pixabay:</strong> pixabay.com (Large sélection)</li>
+            <li><strong>Freepik:</strong> freepik.com (Avec version gratuite)</li>
+        </ul>
+    </div>
+
+    <div class="success">
+        <strong>✓ Une fois les images téléchargées:</strong>
+        <p>Mettez-les dans le dossier <code>afnaB/images/</code> avec les noms exacts mentionnés ci-dessus. Le site affichera automatiquement les images!</p>
+    </div>
+
+    <div class="guide-section">
+        <h2>5. Vérification</h2>
+        <p>Pour vérifier que tout fonctionne:</p>
+        <ol>
+            <li>Ouvrez <code>boutique.html</code> dans le navigateur</li>
+            <li>Vous devez voir 8 produits avec les images</li>
+            <li>Si une image manque, vérifiez le nom du fichier</li>
+            <li>Si aucune image n'apparaît, vérifiez le chemin du dossier</li>
+        </ol>
+    </div>
+
+    <div class="warning">
+        <strong>💡 Astuce:</strong> Vous pouvez aussi modifier les URLs dans <code>products.js</code> pour pointer vers d'autres chemins si vous préférez organiser autrement vos images.
+    </div>
+
+</body>
+</html>
